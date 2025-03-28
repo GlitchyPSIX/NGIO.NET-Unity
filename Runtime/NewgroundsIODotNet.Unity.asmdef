@@ -2,14 +2,15 @@
     "name": "NewgroundsIODotNet.Unity",
     "rootNamespace": "",
     "references": [
-        "NewgroundsIODotNet",
         "Unity.TextMeshPro"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],
     "allowUnsafeCode": false,
     "overrideReferences": false,
-    "precompiledReferences": [],
+    "precompiledReferences": [
+        "NewgroundsIODotNet.dll"
+    ],
     "autoReferenced": true,
     "defineConstraints": [],
     "versionDefines": [],

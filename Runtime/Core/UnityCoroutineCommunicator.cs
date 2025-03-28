@@ -109,8 +109,8 @@ namespace NewgroundsIODotNet.Unity {
                     yield return new WaitForEndOfFrame();
                     continue;
                 }
-                HeartBeat();
                 yield return new WaitForSecondsRealtime(_heartbeatDelay);
+                HeartBeat();
             }
 
             yield break;
