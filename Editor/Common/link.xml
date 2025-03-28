@@ -1,0 +1,4 @@
+<linker>
+    <assembly fullname="NewgroundsIODotNet" preserve="all" />
+    <assembly fullname="NewgroundsIODotNet.Unity" preserve="all" />
+</linker>

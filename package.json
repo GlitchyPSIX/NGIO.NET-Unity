@@ -1,0 +1,17 @@
+{
+    "name": "xyz.glitchypsi.ngionet",
+    "version": "0.1.0",
+    "displayName": "Newgrounds.io.NET - Unity Coroutine",
+    "description": "Unity implementation of the NGIO.NET library, connects with the Newgrounds.io API.",
+    "unity": "2021.3",
+    "unityRelease": "0f1",
+    "dependencies": {
+        "com.unity.nuget.newtonsoft-json": "3.0.2",
+        "com.unity.textmeshpro": "3.0.6"
+    },
+    "type": "library",
+    "author": {
+        "name": "GlitchyPSI",
+        "url": "https://glitchypsi.xyz"
+    }
+}
