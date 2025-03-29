@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using NewgroundsIODotNet.DataModels;
 using NewgroundsIODotNet.Logging;
 using NewgroundsIODotNet.Unity;
@@ -41,10 +42,20 @@ public class NGIONet : MonoBehaviour {
 
         // TODO: Store SessionID in Playerprefs
         NgioDotNetSettings setts = NgioSettings;
-        Debug.Log(NgioSettings);
+
+        string existingSessionId = PlayerPrefs.GetString("__ngio_session_id", null);
+
+#if UNITY_WEBGL
+        if (!string.IsNullOrWhiteSpace(Application.absoluteURL)) {
+            Dictionary<string, string> qparams = GetQueryParams(new Uri(Application.absoluteURL));
+            if (qparams.TryGetValue("ngio_session_id", out string sessId)) {
+                existingSessionId = sessId;
+            }
+        }
+#endif
         _communicator = new UnityCoroutineCommunicator(setts.AppId, setts.EncryptionKey, this,
             setts.AppVersion, setts.DebugMode, setts.PreloadMedals, setts.PreloadScores,
-            setts.LogViewOnInit);
+            setts.LogViewOnInit, existingSessionId);
 
         _communicator.MedalUnlocked += (sender, medal) => MedalUnlocked?.Invoke(medal);
 
@@ -64,5 +75,27 @@ public class NGIONet : MonoBehaviour {
                     break;
             }
         };
+
+        _communicator.Ready += (sender, args) => {
+            // save to playerprefs
+            if (!_communicator.LoginSkipped
+                && _communicator.Session != null
+                && _communicator.Session.Value.RememberSession) {
+                PlayerPrefs.SetString("__ngio_session_id", _communicator.Session.Value.Id);
+            }
+        };
+    }
+
+    private Dictionary<string, string> GetQueryParams(Uri uri) {
+        if (uri == null) return null;
+
+        Dictionary<string, string> paramsDict = new();
+        string query = uri.Query.TrimStart('?');
+        foreach (string queryParam in query.Split("&")) {
+            string[] qParams = queryParam.Split("=");
+            paramsDict.Add(qParams[0], qParams[1] ?? null);
+        }
+
+        return paramsDict;
     }
 }
