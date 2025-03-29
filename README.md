@@ -22,9 +22,7 @@ The wiki is a work in progress!
 
 The way of working with the NGIO.NET Communicator stays the same, except you must have a GameObject with the `NGIO.NET Tank Engine` script attached to have it readily available. Once it's all set up in runtime, you can access the NGIO.NET Communicator from anywhere in your code by accessing the singleton ``NGIONet.Engine.Comms`` . From there onwards, it works just like you'd work with NGIO.NET.
 
-You can eventually read the Quickstart in the wiki.
-
-**NOTE: The scripts currently don't remember sessions nor do they take the session information given by Newgrounds when hosted over there. This will be added soon.**
+You can read the Quickstart in the [wiki](https://github.com/GlitchyPSIX/NGIO.NET-Unity/wiki).
 
 # License
 
