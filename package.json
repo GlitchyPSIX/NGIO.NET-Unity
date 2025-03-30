@@ -1,6 +1,6 @@
 {
     "name": "xyz.glitchypsi.ngionet",
-    "version": "0.2.0",
+    "version": "0.2.1",
     "displayName": "Newgrounds.io.NET - Unity Coroutine",
     "description": "Unity implementation of the NGIO.NET library, connects with the Newgrounds.io API.",
     "unity": "2021.3",
