@@ -40,10 +40,11 @@ public class NGIONet : MonoBehaviour {
             DontDestroyOnLoad(this);
         }
 
-        // TODO: Store SessionID in Playerprefs
         NgioDotNetSettings setts = NgioSettings;
 
         string existingSessionId = PlayerPrefs.GetString("__ngio_session_id", null);
+        // explicitly turn null if completely empty
+        existingSessionId = string.IsNullOrWhiteSpace(existingSessionId) ? null : existingSessionId;
 
 #if UNITY_WEBGL
         if (!string.IsNullOrWhiteSpace(Application.absoluteURL)) {
