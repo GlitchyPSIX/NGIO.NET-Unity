@@ -11,6 +11,9 @@ Assets:
   - GlitchyPSI
 - Default medal toast assets:
   - PsychoGoldfishNG (Newgrounds font, sound effects, NGIO AS2 medal look; from the NGIO AS2 library)
+
 - Special thanks
   - Rallix
   - TomFulp
+  - PsychoGoldfishNG (documentation, guidance)
+  - BoxManSFM (Unity 2021.3 testing)
