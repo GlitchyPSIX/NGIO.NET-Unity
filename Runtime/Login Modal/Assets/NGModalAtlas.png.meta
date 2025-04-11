@@ -192,10 +192,10 @@ TextureImporter:
       name: NGM_Button_Normal
       rect:
         serializedVersion: 2
-        x: 0
-        y: 246
-        width: 52
-        height: 256
+        x: 2
+        y: 248
+        width: 48
+        height: 252
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -213,10 +213,10 @@ TextureImporter:
       name: NGM_Button_Hover
       rect:
         serializedVersion: 2
-        x: 67
-        y: 246
-        width: 52
-        height: 256
+        x: 69
+        y: 248
+        width: 48
+        height: 252
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -234,10 +234,10 @@ TextureImporter:
       name: NGM_Button_Press
       rect:
         serializedVersion: 2
-        x: 135
-        y: 246
-        width: 52
-        height: 256
+        x: 137
+        y: 248
+        width: 48
+        height: 251
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -255,10 +255,10 @@ TextureImporter:
       name: NGM_Button_Disabled
       rect:
         serializedVersion: 2
-        x: 201
-        y: 246
-        width: 53
-        height: 256
+        x: 204
+        y: 248
+        width: 47
+        height: 251
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
