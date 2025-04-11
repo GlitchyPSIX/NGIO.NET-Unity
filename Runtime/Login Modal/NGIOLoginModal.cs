@@ -114,11 +114,6 @@ public class NGIOLoginModal : MonoBehaviour {
 
     }
 
-    void OnGUI() {
-        GUILayout.Label($"Stat: {NGIONet.Engine.Comms.ConnectionStatus}");
-        GUILayout.Label($"LPO: {NGIONet.Engine.Comms.LoginPageOpen}");
-    }
-
     void OnDestroy() {
         _canCommunicate = false;
         NGIONet.Engine.Comms.ConnectionStatusChange -= StatusChange;
